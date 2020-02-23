@@ -1,9 +1,7 @@
-
-#header_image{
-    width: 20%;
-}
-
 #footer_image {
-    margin-top: 30px;
-    width: 100%;
+    margin-top: 20px;
+  }
+
+.dashboard {
+    margin: 20px 0 20px;
 }

@@ -1,12 +1,18 @@
 import React from 'react'
+import { Container, Row, Col } from 'reactstrap'
+import Image from 'react-bootstrap/Image'
 
 function Header (){
     return(
-        <div class="container-fluid">
-            <div class="text-center">
-		        <img class="col-lg-2 col-md-3 col-sm-4 col-6" id="header_image" src="assets/images/logoKGT.png" alt="Kids Gift Tracker logo" />
-            </div>
-        </div>
+        <Container className="dashboard"  fluid={true}>
+            <Row className="justify-content-center">   
+                <Col xs={6} md={3} lg={2} xl={2}>
+                    <a href="./home">
+                        <Image src="assets/images/logoKGT.png" alt="Kids Gift Tracker logo" fluid />
+                    </a>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
