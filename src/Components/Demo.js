@@ -6,7 +6,7 @@ function Demo () {
         <Container className="dashboard">
             <Row>
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
-                    <a href="${RELATIVE_PATH}/kids"><Button color="success">See kids</Button></a>
+                    <a href="./kidslist"><Button color="success">See kids</Button></a>
                 </Col>
             </Row>
         </Container>
