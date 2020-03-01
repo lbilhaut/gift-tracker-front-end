@@ -38,7 +38,12 @@ function KidsList (props) {
                     <ul>{list}</ul>
                 </Row>
                 <Row>
-                    <Col sm="12" md={{ size: 6, offset: 3 }}>
+                    <Col sm="12" md={{ size: 6, offset: 3 }} className="button">
+                        <a href="./addakid"><Button color="success">Add a kid</Button></a>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm="12" md={{ size: 6, offset: 3 }} className="button">
                         <a href="./demo"><Button color="success">Back to dashboard</Button></a>
                     </Col>
                 </Row>
