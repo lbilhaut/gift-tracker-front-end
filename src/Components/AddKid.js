@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Button, Label } from 'reactstrap'
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Control, LocalForm, Errors } from 'react-redux-form'
 import Image from 'react-bootstrap/Image'
-
+import { withRouter } from 'react-router-dom';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || ((val.length) <= len);
@@ -19,6 +19,9 @@ class AddKid extends Component {
         this.props.postKid(values.birthYear, values.firstname);
         console.log("Current State is: " + JSON.stringify(values));
         alert("Current State is: " + JSON.stringify(values));
+        window.location.href = "kidslist"
+        // let path = `kidslist`;
+        // this.props.history.push(path);
     }
     render() {
         return (
@@ -79,7 +82,7 @@ class AddKid extends Component {
                         <Col md={{ size: 8 }}>
                             <Button type="submit" color="primary">
                                 Add this kid
-                                                                </Button>
+                            </Button>
                         </Col>
                     </Row>
                 </LocalForm>
@@ -94,4 +97,4 @@ class AddKid extends Component {
 
 }
 
-export default AddKid
+export default withRouter(AddKid)

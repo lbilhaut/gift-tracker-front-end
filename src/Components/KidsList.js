@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'reactstrap'
-import {Loading} from './Common/loading'
+import { Loading } from './Common/loading'
 
-function KidsList (props) {
+function KidsList(props) {
 
     const list = props.kids.kids.map((kid) => {
         return (
@@ -12,8 +12,8 @@ function KidsList (props) {
         );
     });
 
-    if(props.kids.isLoading){
-        return(
+    if (props.kids.isLoading) {
+        return (
             <div className="container">
                 <div className="row">
                     <Loading />
@@ -21,8 +21,8 @@ function KidsList (props) {
             </div>
         );
     }
-    else if(props.kids.errMess){
-        return(
+    else if (props.kids.errMess) {
+        return (
             <div className="container">
                 <div className="row">
                     <h4>{props.kids.errMess}</h4>
@@ -30,7 +30,7 @@ function KidsList (props) {
             </div>
         );
     }
-    else{
+    else {
         return (
             <Container className="dashboard">
                 <Row>
